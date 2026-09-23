@@ -1,0 +1,11 @@
+# Binários
+rpg
+*.o
+*.out
+*.exe
+
+# Editores / SO
+.vscode/
+.idea/
+*.swp
+.DS_Store
