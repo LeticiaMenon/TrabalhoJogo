@@ -1,5 +1,5 @@
 Jogo escolhido RPG de multiplicas escolhas.
-Nome:
+\nNome:
 
 
 
