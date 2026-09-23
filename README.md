@@ -27,6 +27,7 @@ rpg-vila/
 ├── .gitignore
 └── README.md
 ```
+![imagem ilutrativo](image_vtyn8wvtyn8wvtyn.png)
 
 ## Status do projeto
 
