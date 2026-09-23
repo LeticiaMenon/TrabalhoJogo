@@ -12,7 +12,7 @@ O desafio técnico do projeto é modelar, em linguagem C, um sistema de RPG text
 
 ## 2. Solução proposta
 
-**Eu não quero Morrer!!** é um RPG em texto (interface via terminal) no qual o jogador assume o papel da vilã de uma história de fantasia medieval, para a qual "reencarnou". A cada capítulo, o jogo apresenta uma cena narrativa com opções de ação; cada opção altera o valor de duas variáveis de estado do jogador: **Pontos de Bondade** (impacto geral acumulado das suas ações) e **Confiança do Dragão** (relação construída especificamente com um personagem-chave da trama).
+**De repente Vilã** é um RPG em texto (interface via terminal) no qual o jogador assume o papel da vilã de uma história de fantasia medieval, para a qual "reencarnou". A cada capítulo, o jogo apresenta uma cena narrativa com opções de ação; cada opção altera o valor de duas variáveis de estado do jogador: **Pontos de Bondade** (impacto geral acumulado das suas ações) e **Confiança do Dragão** (relação construída especificamente com um personagem-chave da trama).
 
 O jogo avança por meio de um grafo de nós narrativos: cada nó contém um texto descritivo e uma lista de escolhas que levam a outros nós. Dois momentos são estruturalmente centrais para o enredo:
 
