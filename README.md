@@ -20,10 +20,10 @@ rpg-vila/
 │   ├── 01-descricao-projeto.md
 │   ├── 02-fluxograma.md
 │   └── 03-estruturas-dados.md
+├   └──src/
+│   └── main.c
 ├── include/
 │   └── jogo.h
-├── src/
-│   └── main.c
 ├── .gitignore
 └── README.md
 ```
