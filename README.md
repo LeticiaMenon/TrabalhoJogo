@@ -1,4 +1,4 @@
-# Eu não quero Morrer!!! — RPG em C
+# De repente Vilã — RPG em C
 
 RPG em texto (terminal), desenvolvido em linguagem C, para a disciplina de Linguagem e técnicas da programação.
 
