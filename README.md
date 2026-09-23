@@ -27,7 +27,7 @@ rpg-vila/
 ├── .gitignore
 └── README.md
 ```
-![imagem ilutrativo](docs/image_vtyn8wvtyn8wvtyn.jpg)
+![imagem ilutrativo](docs/otomeisekai.jpg)
 
 ## Status do projeto
 
