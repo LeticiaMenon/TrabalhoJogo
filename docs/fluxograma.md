@@ -1,7 +1,5 @@
 # Fluxograma e Estrutura Lógica
 
-O diagrama abaixo está em sintaxe Mermaid, renderizada automaticamente pelo GitHub ao visualizar este arquivo `.md` no repositório.
-
 ```mermaid
 flowchart TD
     A[Início: jogador reencarna como a vilã] --> B["Capítulo 1: primeiras escolhas no reino"]
