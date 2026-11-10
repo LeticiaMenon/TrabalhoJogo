@@ -238,3 +238,305 @@ void desenharCavaleiros() {
     printf("\n");
     printf("           CAVALEIROS NA ESTRADA - LUCIAN E SEUS COMPANHEIROS\n");
 }
+void prologo() {
+    linha();
+    printf("                 DE REPENTE VILA\n");
+    printf("              Uma segunda chance\n");
+    linha();
+    printf("\nVoce se lembra de estar lendo 'A Coroa do Destino',\n");
+    printf("um romance sobre um heroi que salvaria o reino de Valdoria.\n");
+    printf("Na ultima pagina, a cruel duquesa Evelynn de Ravencrest\n");
+    printf("morria diante da espada do heroi Adrian.\n");
+    printf("\nMas, ao abrir os olhos, voce nao esta mais em seu quarto.\n");
+    printf("Cortinas vermelhas, paredes de pedra e um espelho dourado\n");
+    printf("revelam uma verdade impossivel: voce agora e Evelynn.\n");
+    printf("\nNo livro, a duquesa era odiada pelos servos, temida pelo\n");
+    printf("povo e condenada por suas proprias escolhas.\n");
+    printf("A batalha final acontecera em poucas semanas.\n");
+    printf("\nTalvez voce nao consiga mudar o mundo inteiro.\n");
+    printf("Mas pode tentar mudar o destino desta vila.\n");
+    pausa();
+}
+
+
+void lembrancaDoPassado() {
+    linha();
+    printf("FLASHBACK - QUANDO TUDO ERA DIFERENTE\n");
+    desenharCastelo();
+    linha();
+    printf("\nAo tocar um medalhao no diario, uma lembranca invade\n");
+    printf("sua mente. Sao memorias da verdadeira Evelynn.\n");
+    printf("\nAnos atras, Evelynn e Adrian brincavam nos jardins\n");
+    printf("do castelo. Ele era filho de um cavaleiro, e ela,\n");
+    printf("a herdeira de Ravencrest. Eram amigos inseparaveis.\n");
+    printf("\n'Quando eu for heroi, vou proteger voce!', dizia Adrian.\n");
+    printf("'E eu vou proteger voce tambem!', respondia Evelynn.\n");
+    printf("\nMas a felicidade terminou quando a mae de Evelynn,\n");
+    printf("Lady Helena, morreu durante uma epidemia no reino.\n");
+    printf("Evelynn pediu ajuda a nobreza, mas recebeu silencio.\n");
+    printf("A dor se transformou em raiva. Ela passou a acreditar\n");
+    printf("que bondade era fraqueza e que o poder impediria\n");
+    printf("que alguem a ferisse novamente.\n");
+    printf("\nAdrian tentou consola-la, mas Evelynn o afastou.\n");
+    printf("'Voce nao entende o que perdi. Va embora!'\n");
+    printf("Com o tempo, ela aumentou impostos, castigou servos\n");
+    printf("e se tornou a duquesa temida por todo o reino.\n");
+    printf("\nA lembranca termina. Voce compreende o sofrimento\n");
+    printf("da antiga Evelynn, mas sabe que ele nao justifica\n");
+    printf("o mal que ela causou. Ainda pode escolher diferente.\n");
+    pausa();
+}
+
+void viagemAteVila() {
+    linha();
+    printf("ENTRE O CASTELO E A VILA - A CARTA ESCONDIDA\n");
+    desenharBiblioteca();
+    linha();
+    printf("\nNa biblioteca, voce encontra uma carta da antiga\n");
+    printf("administradora das terras de Ravencrest.\n");
+    printf("Ela alerta que os impostos estao deixando familias\n");
+    printf("sem comida. O conselheiro real, Lorde Varen,\n");
+    printf("escondeu as reclamacoes para proteger sua posicao.\n");
+    printf("\nVoce decide investigar pessoalmente. Se quer mudar\n");
+    printf("o destino de Evelynn, precisa conhecer os danos\n");
+    printf("causados pelas ordens que carregam seu nome.\n");
+    printf("\nLivia lhe entrega um manto simples para viajar\n");
+    printf("sem ser reconhecida. O cocheiro Tomas oferece ajuda.\n");
+    printf("Durante o caminho, ele conta que sua irma mora\n");
+    printf("na vila e nao consegue alimentar os filhos.\n");
+    printf("\nQuando a estrada fica estreita, voces descem da\n");
+    printf("carruagem e seguem a pe ate as primeiras casas.\n");
+    printf("Voce ve campos abandonados e um moinho parado.\n");
+    pausa();
+}
+
+void aventuraFloresta() {
+    int opcao;
+    linha();
+    printf("A AVENTURA - O MAPA DO CURANDEIRO\n");
+    desenharPonte();
+    linha();
+    printf("\nDepois de visitar a vila, voce descobre que as\n");
+    printf("reservas de graos do reino foram roubadas.\n");
+    printf("Uma curandeira chamada Mira revela que os bandidos\n");
+    printf("levaram os suprimentos pela Floresta de Cinzas.\n");
+    printf("\nEla tambem conta que um dragao antigo, Kael,\n");
+    printf("protegia as nascentes que irrigavam a regiao.\n");
+    printf("Desde que cacadores o feriram, as fontes secaram.\n");
+    printf("Se encontrar Kael e conseguir sua ajuda, voce\n");
+    printf("podera descobrir como recuperar a agua da vila.\n");
+    printf("\nMira entrega um mapa e ervas para tratar feridas.\n");
+    printf("Tomas se oferece para acompanha-la ate a floresta.\n");
+    printf("No caminho, voces encontram uma ponte quebrada.\n");
+    printf("\nComo deseja atravessar?\n");
+    printf("1 - Ajudar Tomas a construir uma passagem segura.\n");
+    printf("2 - Procurar uma trilha mais longa entre as pedras.\n");
+    printf("3 - Mandar Tomas atravessar primeiro para testar.\n");
+    opcao = escolher(3);
+    if (opcao == 1) {
+        bondade = bondade + 10;
+        printf("\nVoces juntam tabuas e amarram cordas. Tomas\n");
+        printf("agradece por voce nao colocar a vida dele em risco.\n");
+    } else if (opcao == 2) {
+        printf("\nVoces encontram um caminho estreito, mas seguro.\n");
+        printf("A viagem demora, e a noite comeca a cair.\n");
+    } else {
+        bondade = bondade - 10;
+        printf("\nTomas quase cai no rio ao testar a ponte.\n");
+        printf("Ele consegue voltar, mas perde parte da confianca\n");
+        printf("que estava comecando a depositar em voce.\n");
+    }
+    printf("\nMais adiante, voces encontram marcas de correntes,\n");
+    printf("penas de flechas e pegadas enormes na lama.\n");
+    printf("O mapa de Mira indica uma clareira logo a frente.\n");
+    printf("Voce sabe agora por que precisa encontrar o dragao.\n");
+    mostrarStatus();
+    pausa();
+}
+
+void amizadeDragao() {
+    int opcao;
+    linha();
+    printf("ENTRE AS MONTANHAS - UMA AMIZADE IMPROVAVEL\n");
+    desenharMontanhas();
+    linha();
+    printf("\nApos o encontro na floresta, voce retorna ao abrigo\n");
+    printf("de Mira para descobrir mais sobre Kael.\n");
+    printf("A curandeira explica que dragoes entendem promessas\n");
+    printf("e lembram de quem os trata com respeito.\n");
+    printf("\nVoce leva agua e ervas ate uma colina proxima.\n");
+    printf("Kael aparece entre as arvores. Ainda esta cauteloso.\n");
+    printf("Voce se senta longe dele e deixa os suprimentos\n");
+    printf("no chao, sem tentar obriga-lo a se aproximar.\n");
+    printf("\nO que voce faz para conquistar sua confianca?\n");
+    printf("1 - Permanecer ao lado dele e cuidar da asa ferida.\n");
+    printf("2 - Deixar comida e respeitar seu espaco.\n");
+    printf("3 - Tentar subir em suas costas sem permissao.\n");
+    opcao = escolher(3);
+    if (opcao == 1) {
+        bondade = bondade + 10;
+        confianca = confianca + 15;
+        printf("\nKael permite que voce troque a faixa da asa.\n");
+        printf("Quando termina, ele repousa a cabeca perto de voce.\n");
+        printf("Pela primeira vez, voces descansam sem medo.\n");
+    } else if (opcao == 2) {
+        confianca = confianca + 10;
+        printf("\nVoce recua e espera. Kael aceita a comida e\n");
+        printf("se aproxima um pouco antes de partir.\n");
+    } else {
+        confianca = confianca - 20;
+        printf("\nKael se assusta e abre as asas, derrubando voce.\n");
+        printf("Ele nao a fere, mas se afasta. Confianca nao\n");
+        printf("pode ser exigida a forca.\n");
+    }
+    printf("\nNos dias seguintes, voce visita a colina sempre\n");
+    printf("que pode. Conta historias de sua antiga vida,\n");
+    printf("observa Kael aprender a voar novamente e descobre\n");
+    printf("que ele gosta de dormir perto das fontes quentes.\n");
+    printf("Uma noite, Kael leva voce ate uma nascente escondida.\n");
+    printf("A agua ainda corre ali. Talvez seja possivel abrir\n");
+    printf("novamente os canais que abasteciam a vila.\n");
+    printf("\nA amizade cresce em pequenos gestos. Ainda assim,\n");
+    printf("Kael precisa decidir se deseja lutar ao seu lado.\n");
+    mostrarStatus();
+    pausa();
+}
+
+void capitulo1() {
+    int opcao;
+    linha();
+    printf("CAPITULO 1 - O DESPERTAR NO CASTELO\n");
+    desenharVila();
+    linha();
+    printf("\nA luz da manha invade o quarto da duquesa. Voce tenta\n");
+    printf("se acostumar com o peso de um nome que nao e seu.\n");
+    printf("Uma jovem criada chamada Livia entra com o cafe da manha.\n");
+    printf("Ao perceber que voce esta acordada, ela se assusta,\n");
+    printf("tropeca no tapete e derruba uma bandeja de porcelana.\n");
+    printf("\n'Perdao, minha senhora! Por favor, nao me castigue!'\n");
+    printf("A garota se ajoelha entre os cacos, tremendo.\n");
+    printf("Voce se recorda: no livro, Evelynn punia servos por menos.\n");
+    printf("\nO que voce faz?\n");
+    printf("1 - Ajudar Livia a recolher os cacos.\n");
+    printf("2 - Nao se envolver e deixar que ela limpe.\n");
+    printf("3 - Gritar com Livia por sua falta de cuidado.\n");
+    opcao = escolher(3);
+    if (opcao == 1) {
+        bondade = bondade + 20;
+        printf("\nVoce se ajoelha ao lado dela e pergunta se esta ferida.\n");
+        printf("Livia arregala os olhos. 'A senhora... esta me ajudando?'\n");
+        printf("Quando voce diz que acidentes acontecem, ela sorri\n");
+        printf("timidamente. Pela primeira vez, alguem ve outra Evelynn.\n");
+    } else if (opcao == 2) {
+        printf("\nVoce observa em silencio. Livia limpa tudo rapidamente.\n");
+        printf("Ela sai aliviada por nao ter sido punida, mas ainda teme\n");
+        printf("o que a duquesa podera fazer no futuro.\n");
+    } else {
+        bondade = bondade - 15;
+        printf("\nSua voz ecoa pelo quarto. Livia pede desculpas varias\n");
+        printf("vezes e sai chorando. O castelo continua a temer voce.\n");
+    }
+    printf("\nMais tarde, voce encontra o diario da antiga Evelynn.\n");
+    printf("Entre as paginas, ha uma frase sublinhada:\n");
+    printf("'Nao existe misericordia para quem nasceu como monstro.'\n");
+    printf("Voce fecha o diario. Sera que isso precisa ser verdade?\n");
+    mostrarStatus();
+    pausa();
+    lembrancaDoPassado();
+    viagemAteVila();
+}
+
+void capitulo2() {
+    int opcao;
+    linha();
+    printf("CAPITULO 2 - A VILA ESQUECIDA\n");
+    desenharEstrada();
+    linha();
+    printf("\nPara entender o reino, voce deixa o castelo em uma\n");
+    printf("carruagem discreta. Na estrada, encontra uma vila pobre.\n");
+    printf("O moinho esta parado, os campos estao secos e quase nao\n");
+    printf("ha comida nas casas. Uma mulher segura uma crianca fraca.\n");
+    printf("\n'Os impostos levaram nossa ultima colheita', ela conta.\n");
+    printf("'Se a duquesa soubesse de nossa fome, talvez ajudasse.'\n");
+    printf("\nVoce sente um aperto no peito: foi Evelynn quem ordenou\n");
+    printf("a cobranca desses impostos na historia original.\n");
+    printf("Os moradores ainda nao reconheceram seu rosto.\n");
+    printf("\nO que voce faz?\n");
+    printf("1 - Abrir os estoques de comida de sua carruagem.\n");
+    printf("2 - Entregar algumas moedas aos moradores.\n");
+    printf("3 - Ignorar os pedidos e continuar a viagem.\n");
+    opcao = escolher(3);
+    if (opcao == 1) {
+        bondade = bondade + 25;
+        printf("\nVoce manda distribuir paes, frutas e sacos de graos.\n");
+        printf("As criancas correm para ajudar. A mulher agradece,\n");
+        printf("sem imaginar que esta diante da propria duquesa.\n");
+        printf("A noticia de uma nobre generosa comeca a se espalhar.\n");
+    } else if (opcao == 2) {
+        bondade = bondade + 10;
+        printf("\nVoce entrega uma bolsa de moedas. Nao resolvera a fome\n");
+        printf("por muito tempo, mas podera comprar comida por alguns dias.\n");
+        printf("Os moradores agradecem sua ajuda.\n");
+    } else {
+        bondade = bondade - 10;
+        printf("\nVoce ordena que o cocheiro siga em frente. Pelo vidro,\n");
+        printf("ve a mulher abracar a crianca e abaixar a cabeca.\n");
+        printf("O silencio da carruagem parece mais pesado que antes.\n");
+    }
+    printf("\nAo anoitecer, um viajante menciona rumores sobre um\n");
+    printf("dragao negro visto nas florestas do norte. Dizem que\n");
+    printf("quem cruza seu caminho nunca retorna.\n");
+    mostrarStatus();
+    pausa();
+    aventuraFloresta();
+}
+
+void capitulo3() {
+    int opcao;
+    linha();
+    printf("CAPITULO 3 - O GUARDIAO DA FLORESTA\n");
+    desenharFloresta();
+    linha();
+    printf("\nDe repente uma tempestade começa, sua visão fica debilitada e voce se perde\n");
+    printf("na Floresta de Cinzas. Entre as arvores, ouve um rugido.\n");
+    printf("Ao seguir o som, encontra um enorme dragao negro preso\n");
+    printf("em correntes de ferro, com uma asa gravemente ferida.\n");
+    desenharDragao();
+    printf("\nSeus olhos dourados acompanham cada movimento seu.\n");
+    printf("Uma flecha de cacador esta cravada entre suas escamas.\n");
+    printf("Quando voce se aproxima, ele mostra os dentes.\n");
+    printf("\nVoce se lembra do livro: este dragao, chamado Kael,\n");
+    printf("era considerado uma criatura cruel. Mas agora ele parece\n");
+    printf("mais assustado e ferido do que verdadeiramente maligno.\n");
+    printf("\nO que voce faz?\n");
+    printf("1 - Libertar Kael e cuidar de seus ferimentos.\n");
+    printf("2 - Soltar as correntes e partir sem se aproximar.\n");
+    printf("3 - Atacar o dragao antes que ele possa reagir.\n");
+    opcao = escolher(3);
+    if (opcao == 1) {
+        bondade = bondade + 20;
+        confianca = confianca + 40;
+        printf("\nCom cuidado, voce rompe as correntes e retira a flecha.\n");
+        printf("Kael rosna, mas nao tenta feri-la. Voce usa seu manto\n");
+        printf("para improvisar uma faixa sobre a asa machucada.\n");
+        printf("Antes de partir, o dragao inclina a cabeca, como se\n");
+        printf("estivesse tentando entender sua estranha gentileza.\n");
+    } else if (opcao == 2) {
+        bondade = bondade + 10;
+        confianca = confianca + 15;
+        printf("\nVoce destrava as correntes e se afasta rapidamente.\n");
+        printf("Kael se ergue com dificuldade e observa sua partida.\n");
+        printf("Ele nao esquece que voce poderia te-lo deixado preso.\n");
+    } else {
+        bondade = bondade - 20;
+        confianca = confianca - 30;
+        printf("\nVoce golpeia a criatura. Kael ruge de dor e raiva.\n");
+        printf("As correntes se partem com a forca de seu movimento.\n");
+        printf("Voce foge por pouco. O dragao memoriza seu rosto.\n");
+    }
+    printf("\nNa saida da floresta, voce encontra uma escama negra\n");
+    printf("sobre a trilha. Talvez o destino ainda una voces.\n");
+    mostrarStatus();
+    pausa();
+    amizadeDragao();
+}
