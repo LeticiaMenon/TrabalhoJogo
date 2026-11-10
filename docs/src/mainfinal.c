@@ -540,3 +540,265 @@ void capitulo3() {
     pausa();
     amizadeDragao();
 }
+
+void capitulo4() {
+    int opcao;
+    linha();
+    printf("CAPITULO 4 - A CAVERNA DO DRAGAO\n");
+    desenharCaverna();
+    linha();
+    printf("\nUm mensageiro avisa que o heroi Adrian reuniu soldados\n");
+    printf("e pretende marchar contra o castelo de Ravencrest.\n");
+    printf("Voce volta as montanhas para pedir ajuda a Kael\n");
+    printf("para reabrir os canais de agua e proteger a vila.\n");
+    printf("\nNo fundo dela, Kael descansa junto a um lago subterraneo.\n");
+    desenharDragao();
+    printf("\nEle reconhece voce imediatamente. Suas asas se abrem\n");
+    printf("e o ar esquenta ao redor de suas presas.\n");
+    if (confianca >= 30) {
+        printf("Mas seus olhos nao demonstram a mesma hostilidade de antes.\n");
+    } else {
+        printf("O dragao ainda parece desconfiado de suas intencoes.\n");
+    }
+    printf("\nVoce precisa decidir se arriscara uma aproximacao.\n");
+    printf("1 - Pedir a Kael que forme uma alianca com voce.\n");
+    printf("2 - Oferecer comida e tentar ganhar sua amizade.\n");
+    printf("3 - Evitar o dragao e seguir viagem.\n");
+    printf("4 - Enfrentar Kael para provar sua forca.\n");
+    opcao = escolher(4);
+    if (opcao == 1) {
+        if (confianca >= 30) {
+            dragaoAliado = 1;
+            confianca = confianca + 30;
+            printf("\nVoce explica que nao deseja repetir os crimes de Evelynn.\n");
+            printf("Kael escuta em silencio. Entao abaixa a cabeca diante\n");
+            printf("de voce, aceitando sua proposta de alianca.\n");
+            printf("'Nao se arrependera de confiar em mim', voce promete.\n");
+        } else {
+            printf("\nVoce pede ajuda, mas Kael recua e solta fumaca pelas\n");
+            printf("narinas. Uma alianca exige mais do que palavras.\n");
+            printf("Sem confiar em voce, ele se recusa a acompanha-la.\n");
+        }
+    } else if (opcao == 2) {
+        confianca = confianca + 20;
+        bondade = bondade + 10;
+        printf("\nVoce deixa carne e agua limpa diante de Kael.\n");
+        printf("Ele se aproxima devagar, cheirando a oferta.\n");
+        if (confianca >= 30) {
+            dragaoAliado = 1;
+            printf("Depois de comer, o dragao toca sua mao com o focinho.\n");
+            printf("E um gesto pequeno, mas suficiente: Kael e seu aliado.\n");
+        } else {
+            printf("Kael aceita a comida, mas mantem distancia.\n");
+            printf("Voce respeita sua decisao e parte sem uma alianca.\n");
+        }
+    } else if (opcao == 3) {
+        printf("\nVoce escolhe nao arriscar. Atravessa a caverna sem\n");
+        printf("provocar Kael e segue sozinha rumo ao castelo.\n");
+    } else {
+        if (confianca >= 30) {
+            confianca = confianca - 30;
+            printf("\nVoce desembainha a espada. Kael poderia atacar, mas\n");
+            printf("reconhece a pessoa que encontrou na floresta.\n");
+            printf("Ele permite que voce saia, embora nao aceite ser aliado.\n");
+            dragaoAliado = 0;
+        } else {
+            printf("\nKael interpreta seu gesto como uma ameaca mortal.\n");
+            printf("Uma onda de fogo ilumina as paredes da caverna.\n");
+            printf("Voce tenta fugir, mas nao consegue escapar.\n");
+            gameOver = 1;
+        }
+    }
+    mostrarStatus();
+    pausa();
+}
+
+void capitulo5() {
+    int opcao;
+    linha();
+    printf("CAPITULO 5 - OS CAVALEIROS FERIDOS\n");
+    desenharCavaleiros();
+    linha();
+    printf("\nAo retornar ao reino, voce descobre que Sir Adrian\n");
+    printf("reuniu cavaleiros e marcha contra Ravencrest.\n");
+    printf("No caminho, encontra um grupo de soldados atacado\n");
+    printf("por bandidos que roubavam alimentos da regiao.\n");
+    printf("\nUm jovem cavaleiro de cabelos castanhos esta ferido.\n");
+    printf("Seu nome e Lucian. Ele tenta proteger os companheiros,\n");
+    printf("mesmo sem conseguir se levantar.\n");
+    printf("\n'Nao confie na duquesa', murmura um dos soldados.\n");
+    printf("'Ela jamais ajudaria homens do heroi.'\n");
+    printf("\nVoce reconhece o sobrenome do jovem: Lucian de Valdoria.\n");
+    printf("Ele e o irmao mais novo de Adrian, seu antigo amigo.\n");
+    printf("No livro, Lucian desaparecia antes da batalha final.\n");
+    printf("Agora voce entende o que aconteceu com ele.\n");
+    printf("\nO que voce faz?\n");
+    printf("1 - Cuidar de Lucian e dos outros cavaleiros.\n");
+    printf("2 - Deixar remedios e comida para os feridos.\n");
+    printf("3 - Abandonar o grupo e voltar ao castelo.\n");
+    opcao = escolher(3);
+    if (opcao == 1) {
+        bondade = bondade + 25;
+        ajudouIrmao = 1;
+        printf("\nVoce limpa os ferimentos de Lucian e improvisa\n");
+        printf("curativos para os outros cavaleiros. Depois,\n");
+        printf("organiza uma carroca para leva-los a um abrigo.\n");
+        printf("\n'Por que esta nos ajudando?', Lucian pergunta.\n");
+        printf("'Porque voces precisam de ajuda', voce responde.\n");
+        printf("Ele reconhece seu rosto e fica sem palavras.\n");
+        printf("'Meu irmao precisa saber o que fez por nos.'\n");
+    } else if (opcao == 2) {
+        bondade = bondade + 10;
+        ajudouIrmao = 1;
+        printf("\nVoce deixa agua, comida, faixas e remedios.\n");
+        printf("Lucian recebe os suprimentos e agradece.\n");
+        printf("Quando percebe quem voce e, fica surpreso:\n");
+        printf("'Evelynn? Nao esperava ajuda de voce.'\n");
+        printf("Ele promete contar a Adrian o que aconteceu.\n");
+    } else {
+        bondade = bondade - 15;
+        printf("\nVoce parte sem ajudar. Lucian observa sua\n");
+        printf("carruagem desaparecer pela estrada.\n");
+        printf("A imagem cruel da duquesa permanece intacta.\n");
+    }
+    printf("\nAo chegar a Ravencrest, encontra os portoes cercados.\n");
+    printf("Adrian espera no salao do trono, com a espada em maos.\n");
+    printf("Voce reconhece a cena da ultima pagina do livro.\n");
+    mostrarStatus();
+    pausa();
+}
+
+void finalJogo() {
+    linha();
+    printf("CONFRONTO FINAL - O DESTINO DE EVELYNN\n");
+    desenharCastelo();
+    linha();
+    desenharHeroi();
+    printf("\nAdrian entra no salao do trono com a espada erguida.\n");
+    printf("'Evelynn, seus crimes contra Valdoria terminam hoje!'\n");
+    printf("\nVoce reconhece o amigo de infancia nas feicoes\n");
+    printf("do heroi, mas ele so parece enxergar a antiga vila.\n");
+    printf("'Adrian, nos fomos amigos. Lembra do jardim?'\n");
+    printf("'Lembro. Tambem lembro de quem voce se tornou.'\n");
+    printf("\nVoce explica que a morte de Helena mudou Evelynn,\n");
+    printf("mas que a dor nunca justificou suas crueldades.\n");
+    printf("'Nao posso desfazer o passado. Posso escolher\n");
+    printf("o que farei daqui para a frente', voce responde.\n");
+    pausa();
+
+    if (bondade >= 60 && dragaoAliado == 1) {
+        printf("\n*** FINAL ESPECIAL: UMA NOVA HISTORIA ***\n");
+        printf("\nAdrian ainda esta desconfiado e avanca com a espada.\n");
+        printf("Antes que a lamina alcance voce, um rugido sacode\n");
+        printf("as muralhas. Kael sente que sua amiga esta ameacada.\n");
+        desenharDragao();
+        printf("\nO dragao pousa diante do salao e abre as asas,\n");
+        printf("protegendo voce sem atacar o heroi.\n");
+        printf("\nAdrian para imediatamente, perplexo.\n");
+        printf("'Como conseguiu a lealdade de um dragao?'\n");
+        printf("'Todos dizem que Kael odeia os humanos! E voce...'\n");
+        printf("'Voce sempre foi cruel com todos a sua volta!'\n");
+        printf("\n'Eu encontrei Kael ferido e o ajudei', voce diz.\n");
+        printf("'Nao pedi que confiasse em mim. Cuidei dele,\n");
+        printf("respeitei seus limites e conquistei sua amizade.'\n");
+        printf("'Eu mudei, Adrian. Nao sou mais a mesma pessoa.'\n");
+        printf("\nNesse momento, passos apressados ecoam no corredor.\n");
+        if (ajudouIrmao == 1) {
+            printf("'Adrian, espere!', grita Lucian, seu irmao.\n");
+            printf("'Ela salvou a mim e aos outros cavaleiros!'\n");
+            printf("'Mesmo sabendo quem eramos, ela nos ajudou.'\n");
+            printf("'Eu estaria morto se nao fosse por Evelynn.'\n");
+        } else {
+            printf("Um mensageiro chega trazendo relatos da vila.\n");
+            printf("'Os moradores confirmam que a duquesa os ajudou.\n");
+            printf("Ela tambem procurou recuperar nossas nascentes!'\n");
+        }
+        printf("\nAdrian olha para Kael e depois para voce.\n");
+        printf("O dragao permanece ao seu lado por escolha propria.\n");
+        printf("'Talvez eu estivesse lutando contra uma lembranca',\n");
+        printf("Adrian admite, baixando a espada.\n");
+        printf("\nVoces concordam em reparar os danos ao reino.\n");
+        printf("Os canais de agua sao reabertos, e Kael passa\n");
+        printf("a proteger as montanhas como um amigo de Valdoria.\n");
+        printf("A amizade com Adrian pode, enfim, recomecar.\n");
+        printf("\nVOCE VENCEU! O destino foi reescrito.\n");
+    } else if (bondade >= 60) {
+        printf("\n*** FINAL BOM: A VILA REDIMIDA ***\n");
+        printf("\nAdrian hesita. Ele ouviu relatos de sua bondade,\n");
+        printf("mas ainda se lembra dos anos de crueldade.\n");
+        if (ajudouIrmao == 1) {
+            printf("\nLucian entra no salao, apoiado em outro cavaleiro.\n");
+            printf("'Irmao, Evelynn nos ajudou quando precisavamos.\n");
+            printf("Ela nao pediu nada em troca. Eu vi com meus olhos.'\n");
+        } else {
+            printf("\nUm mensageiro confirma que voce ajudou moradores\n");
+            printf("da vila e tentou reparar antigas injusticas.\n");
+        }
+        printf("\nAdrian abaixa a espada e olha para voce.\n");
+        printf("'Nao posso apagar o que aconteceu. Mas posso\n");
+        printf("permitir que voce prove que realmente mudou.'\n");
+        printf("\nVoce continua viva e dedica sua nova chance\n");
+        printf("a reconstruir as terras de Ravencrest.\n");
+        printf("\nVOCE VENCEU! A bondade mudou seu destino.\n");
+    } else if (dragaoAliado == 1) {
+        printf("\n*** FINAL DO DRAGAO: ASAS DA LIBERDADE ***\n");
+        printf("\nAdrian nao acredita que suas mudancas sejam reais.\n");
+        printf("Ele avanca com a espada, decidido a mata-la.\n");
+        printf("Kael sente o perigo e surge sobre o castelo.\n");
+        desenharDragao();
+        printf("\nO dragao abre as asas e bloqueia o ataque.\n");
+        printf("Adrian recua diante do fogo, sem tempo de reagir.\n");
+        printf("Voce sobe nas costas de Kael e escapa pelas nuvens.\n");
+        printf("\nO reino ainda nao perdoou Evelynn, mas Kael\n");
+        printf("permanece ao seu lado. Sua amizade salvou sua vida.\n");
+        printf("\nVOCE VENCEU! Voce escapou com Kael.\n");
+    } else {
+        printf("\n*** FINAL RUIM: O DESTINO SE REPETE ***\n");
+        printf("\nAdrian nao encontra motivos para confiar em voce.\n");
+        printf("Nao ha dragao para protege-la nem provas suficientes\n");
+        printf("de que Evelynn abandonou sua antiga crueldade.\n");
+        printf("O heroi ergue a espada, e o salao fica em silencio.\n");
+        printf("\nA ultima pagina do livro se cumpre como antes.\n");
+        printf("GAME OVER! Talvez outras escolhas mudassem a historia.\n");
+    }
+    desenharCastelo();
+    mostrarStatus();
+}
+
+int main() {
+    int jogarNovamente = 1;
+    int ordem[5] = {1, 2, 3, 4, 5};
+    int i;
+    while (jogarNovamente == 1) {
+        bondade = 0;
+        confianca = 0;
+        dragaoAliado = 0;
+        gameOver = 0;
+        ajudouIrmao = 0;
+        prologo();
+        for (i = 0; i < 5 && gameOver == 0; i++) {
+            if (ordem[i] == 1) {
+                capitulo1();
+            } else if (ordem[i] == 2) {
+                capitulo2();
+            } else if (ordem[i] == 3) {
+                capitulo3();
+            } else if (ordem[i] == 4) {
+                capitulo4();
+            } else if (ordem[i] == 5) {
+                capitulo5();
+            }
+        }
+        if (gameOver == 0) {
+            finalJogo();
+        } else {
+            linha();
+            printf("GAME OVER! Sua jornada terminou na caverna do dragao.\n");
+            mostrarStatus();
+        }
+        printf("\nDeseja jogar novamente?\n1 - Sim\n2 - Nao\n");
+        jogarNovamente = escolher(2);
+    }
+    printf("\nObrigada por jogar De Repente Vila!\n");
+    return 0;
+}
