@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-/* DE REPENTE VILA - RPG de texto para terminal
-   Versao expandida da historia original.
-   Conceitos: variaveis, if/else, while, for, funcoes e vetor.
-*/
 
 int bondade = 0;
 int confianca = 0;
